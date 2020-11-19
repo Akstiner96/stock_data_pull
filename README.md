@@ -9,7 +9,7 @@ This is a reusable dotpy file that will import, clean, and present in DataFrame 
 * User must have their own Alpaca API keys stored in a dotenv file in the same folder as the data_pull.py file.
 
 
-* The [endpoint URL](https://paper-api.alpaca.markets) for key authentication is set to Alpaca's paper trading domain. Use of live trading will likely require an update to the 'base_url' parameter that is inside the 'load' function where api is defined.
+* The endpoint URL for key authentication is set to Alpaca's paper trading domain. Use of live trading will likely require an update to the 'base_url' parameter that is inside the 'load' function where api is defined.
 
 
 * AlphaVantage is used because it provides more data categories than base Alpaca, however, its API call rate limit is far less than Alpaca. For this reason there is a sleep timer added to the 'data_pull' function that adds a minute of wait time after every 5 calls. Limit the 'tickers' list to 5 stocks to get an immediate output. 
